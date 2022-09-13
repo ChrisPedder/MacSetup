@@ -31,3 +31,8 @@ pyenv virtualenv 3.9.2 ml-experiments
 pyenv activate ml-experiments
 pip3 install -r requirements.txt
 
+# If you plan to use transformers, the tokenizers package uses Rust,
+# which you need to install separately
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# and then restart your shell
+source "$HOME/.cargo/env"
